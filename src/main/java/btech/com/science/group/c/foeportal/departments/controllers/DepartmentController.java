@@ -5,6 +5,7 @@ import btech.com.science.group.c.foeportal.departments.requests.DepartmentReques
 import btech.com.science.group.c.foeportal.departments.services.DepartmentService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,6 +15,7 @@ import static java.lang.String.format;
 
 @RestController
 @RequestMapping("api/v1/department")
+@PreAuthorize("hasRole('ADMIN')")
 @CrossOrigin(origins = "*", maxAge = 3600)
 public class DepartmentController {
     private final DepartmentService departmentService;

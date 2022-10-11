@@ -19,11 +19,13 @@ public class Student {
     private Date DOB;
     @OneToOne
     private Program program;
-    private int level;
+    private int level = 100;
     private String indexNumber;
     @OneToOne
     private Department department;
     private String email;
-    private String studentClass;
+    private String studentClass="Class A";
+    private String status = "Active";
+    private Boolean completedStatus = Boolean.FALSE;
 
 }

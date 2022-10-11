@@ -1,6 +1,5 @@
 package btech.com.science.group.c.foeportal.departments.requests;
 
-import btech.com.science.group.c.foeportal.programs.entites.Program;
 import lombok.Data;
 
 import java.util.List;

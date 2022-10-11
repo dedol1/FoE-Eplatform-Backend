@@ -4,6 +4,7 @@ import btech.com.science.group.c.foeportal.programs.entites.Program;
 import btech.com.science.group.c.foeportal.programs.services.ProgramService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,6 +15,7 @@ import static java.lang.String.format;
 @RestController
 @RequestMapping("api/v1/program")
 @CrossOrigin(origins = "*", maxAge = 3600)
+@PreAuthorize("hasRole('ADMIN')")
 public class ProgramController {
 
     private final ProgramService programService;

@@ -15,6 +15,6 @@ public class Department {
     private Long departmentId;
     private String departmentName;
     private final String faculty = "FacultyOfEngineering";
-    @OneToMany
+    @ManyToMany
     private List<Program> programs;
 }
